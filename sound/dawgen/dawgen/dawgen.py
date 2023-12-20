@@ -2,7 +2,7 @@
 
 # project imports
 from Models import MidiNote
-import precanned_notes
+import piano_constants
 
 # typings
 from typing import List
@@ -34,7 +34,7 @@ def midi_sound(notes: List[MidiNote]) -> mido.MidiFile:
 
     track.append(mido.MetaMessage('end_of_track'))
 
-    # Save the MIDI file
+    # return mid
     return mid
 
 def play_mid(mid: mido.MidiFile) -> None:
@@ -44,8 +44,8 @@ def play_mid(mid: mido.MidiFile) -> None:
             port.send(message)
 
 if __name__ == "__main__":
-    #Test the module functionality play "Mary had a little lamb"
-    notes = [precanned_notes.E4, precanned_notes.D4, precanned_notes.C4, precanned_notes.D4, precanned_notes.E4, precanned_notes.E4, precanned_notes.E4, precanned_notes.D4, precanned_notes.D4, precanned_notes.D4, precanned_notes.E4, precanned_notes.E4, precanned_notes.E4, precanned_notes.E4, precanned_notes.D4, precanned_notes.C4]
+    #Test the module plays sounds.  Functionaly play "Mary Had a Little Lamb"
+    notes = [piano_constants.E4, piano_constants.D4, piano_constants.C4, piano_constants.D4, piano_constants.E4, piano_constants.E4, piano_constants.E4, piano_constants.D4, piano_constants.D4, piano_constants.D4, piano_constants.E4, piano_constants.E4, piano_constants.E4, piano_constants.E4, piano_constants.D4, piano_constants.C4]
     midi_notes = []
     
     for note in notes:        

@@ -2,13 +2,10 @@ from Models import *
 
 # Pre-canned notes 
 # (midi note number, piano key number, velocity and note name (english))
-
 # Piano 21 to top of MIDI tuning range
-# midi note number, piano key number, velocity and note name (english)
 A0 = (21, 1, 64, "A0")
 A0_SHARP = (22, 2, 64, "A0#")
 B0 = (23, 3, 64, "B0")
-# Continue from B0
 C1 = (24, 4, 64, "C1")
 C1_SHARP = (25, 5, 64, "C1#")
 D1 = (26, 6, 64, "D1")
@@ -21,8 +18,6 @@ G1_SHARP = (32, 12, 64, "G1#")
 A1 = (33, 13, 64, "A1")
 A1_SHARP = (34, 14, 64, "A1#")
 B1 = (35, 15, 64, "B1")
-
-# Continue for the rest of the notes up to G#9
 C2 = (36, 16, 64, "C2")
 C2_SHARP = (37, 17, 64, "C2#")
 D2 = (38, 18, 64, "D2")
